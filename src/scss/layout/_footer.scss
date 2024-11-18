@@ -7,6 +7,11 @@
     grid-area: main;
     @include flex(space-between, center, row);
     padding: 3rem 0;
+
+    @media screen and (max-width: 900px) {
+        @include flex(flex-start, flex-start, column);
+        gap: 2rem;
+    }
 }
 
 .footer-top-left-wrapper {
@@ -33,6 +38,14 @@
         border: 1px solid $paragraph-color;
         border-radius: 10px;
         padding: 0 1rem;
+
+        @media screen and (max-width: 1000px) {
+            width: 15rem;
+        }
+
+        @media screen and (max-width: 650px) {
+            width: 12rem;
+        }
     }
 }
 
