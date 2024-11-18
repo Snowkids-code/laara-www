@@ -71,6 +71,12 @@
   @media screen and (max-width: 1000px) {
     @include flex(space-between, center, row);
   }
+
+  .navbar-hamburger {
+    img {
+      width: 2rem;
+    }
+  }
 }
 
 .navbar-auth-btns {
