@@ -5,6 +5,7 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 99;
+  color: white;
 }
 
 .navbar-wrapper {
@@ -13,7 +14,7 @@
 
 .navbar-top-content {
   @include flex(space-between, center, row);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   padding-bottom: 0.5rem;
 }
 
