@@ -1,0 +1,23 @@
+@mixin flex($jc, $ai, $fd) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin font($fs, $fw, $color, $lh) {
+  font-size: $fs + rem;
+  font-weight: $fw;
+  color: $color;
+  line-height: $lh + rem;
+}
+
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($x) {
+  width: $x;
+  height: $x;
+}

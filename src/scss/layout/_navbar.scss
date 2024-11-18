@@ -1,0 +1,53 @@
+.navbar-container {
+  @extend .primary-container;
+  padding: 1rem 0;
+}
+
+.navbar-wrapper {
+  grid-area: main;
+}
+
+.navbar-top-content {
+  @include flex(space-between, center, row);
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+.right-navbar-wrapper {
+  @include flex(flex-start, center, row);
+  gap: 2rem;
+}
+
+.social-media-navbar-wrapper {
+  @include flex(flex-start, center, row);
+  gap: 0.5rem;
+
+  img {
+    width: 1.2rem;
+  }
+}
+
+.contact-navbar-wrapper {
+  @include flex(flex-start, center, row);
+  gap: 2rem;
+}
+
+.left-navbar-wrapper {
+  @include flex(flex-end, center, row);
+  gap: 2rem;
+}
+
+.navbar-bottom-content {
+  padding-top: 0.5rem;
+}
+
+.navlinks-container {
+  @include flex(center, center, row);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+
+  li {
+    cursor: pointer;
+  }
+}
