@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import data from "../../data/Navbar.json";
 
 const icons = [
   "/icons/whatsapp.svg",
@@ -6,8 +8,6 @@ const icons = [
   "/icons/facebook.svg",
   "/icons/twitter.svg",
 ];
-
-const links = ["Home", "Category", "Pages", "Dashboard", "News", "Contact"];
 
 export default function Navbar() {
   return (
@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
         <div className="navbar-mobile">
           <div className="navbar-hamburger">
-            <img alt="hamburger" src="/icons/menu.svg"/>
+            <img alt="hamburger" src="/icons/menu.svg" />
           </div>
           <div className="navbar-auth-btns">
             <button className="login-btn">Login</button>
@@ -42,11 +42,11 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navbar-bottom-content">
-            <ul className="navlinks-container">
-                {links.map((value, i) => (
-                    <li key={i}>{value}</li>
-                ))}
-            </ul>
+          <ul className="navlinks-container">
+            {data.map((value, i) => (
+              <li>{value.value}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

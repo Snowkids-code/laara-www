@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "value": "Home",
+    "ref": "/"
+  },
+  {
+    "id": 2,
+    "value": "Category",
+    "ref": "/category"
+  },
+  {
+    "id": 3,
+    "value": "Pages",
+    "ref": "/pages"
+  },
+  {
+    "id": 4,
+    "value": "Dashboard",
+    "ref": "/dashboard"
+  },
+  {
+    "id": 5,
+    "value": "News",
+    "ref": "/news"
+  },
+  {
+    "id": 6,
+    "value": "Contact",
+    "ref": "/contact"
+  }
+]

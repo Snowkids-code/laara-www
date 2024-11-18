@@ -43,7 +43,7 @@ export default function Footer() {
                   <h3>{item.title}</h3>
                   <ul>
                     {item.details.map((value, i) => (
-                      <li>{value}</li>
+                      <li key={i}>{value}</li>
                     ))}
                   </ul>
                 </div>
