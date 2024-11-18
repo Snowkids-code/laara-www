@@ -9,17 +9,8 @@ export default function SingleProperty() {
   const property = useSelector((state) => state.propertyReducer.property.data);
   const { id } = useParams();
 
-  const [displayImage, setDisplayImage] = useState(
-    property?.propertyImages[0].images.url
-  );
-
-  const handleDisplayImage = (value) => {
-    setDisplayImage(value);
-  };
-
   useEffect(() => {
     dispatch(getPropertyById({ id: id }));
-    setDisplayImage(property?.propertyImages[0].images.url);
   }, []);
 
   return (
@@ -55,11 +46,7 @@ export default function SingleProperty() {
                 <div className="cover-img-wrapper">
                   <img
                     alt="cover"
-                    src={
-                      displayImage
-                        ? displayImage
-                        : property?.propertyImages[0].images.url
-                    }
+                    src={property?.propertyImages[0].images.url}
                   />
                 </div>
                 <div
@@ -69,11 +56,7 @@ export default function SingleProperty() {
                   }}
                 >
                   {property.propertyImages?.map((value, i) => (
-                    <img
-                      alt="pic"
-                      src={value.images.url}
-                      onClick={() => handleDisplayImage(value.images.url)}
-                    />
+                    <img alt="pic" src={value.images.url} />
                   ))}
                 </div>
               </div>
