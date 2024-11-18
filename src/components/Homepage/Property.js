@@ -11,11 +11,12 @@ export default function Property({ property }) {
         {property && (
           <div className="property-body">
             {property.data?.map((value, i) => (
-              <PropertyCard details={value} />
+              <div key={i}>
+                <PropertyCard details={value} />
+              </div>
             ))}
           </div>
         )}
-        
       </div>
     </div>
   );

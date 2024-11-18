@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import RoomType from "../components/SingleRoom/RoomType";
@@ -11,6 +11,7 @@ export default function SingleProperty() {
 
   useEffect(() => {
     dispatch(getPropertyById({ id: id }));
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -56,7 +57,7 @@ export default function SingleProperty() {
                   }}
                 >
                   {property.propertyImages?.map((value, i) => (
-                    <img alt="pic" src={value.images.url} />
+                    <img alt="pic" src={value.images.url} key={i} />
                   ))}
                 </div>
               </div>
@@ -66,14 +67,16 @@ export default function SingleProperty() {
                 <p>We offer the folloing features:</p>
                 <ul>
                   {property.accessibilityFeatures.map((value, i) => (
-                    <li>{value.features.feature}</li>
+                    <li key={i}>{value.features.feature}</li>
                   ))}
                 </ul>
               </div>
               <div className="room-type-wrapper">
                 <h3>Select your Room</h3>
                 {property.rooms.map((value, i) => (
-                  <RoomType details={value} />
+                  <div key={i}>
+                    <RoomType details={value} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -87,7 +90,7 @@ export default function SingleProperty() {
                 <h3>Our Policies</h3>
                 <ul>
                   {property.propertyPolicies?.map((value, i) => (
-                    <li>{value.policies.description}</li>
+                    <li key={i}>{value.policies.description}</li>
                   ))}
                 </ul>
               </div>

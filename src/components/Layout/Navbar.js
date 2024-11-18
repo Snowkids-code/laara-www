@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="navbar-bottom-content">
             <ul className="navlinks-container">
                 {links.map((value, i) => (
-                    <li>{value}</li>
+                    <li key={i}>{value}</li>
                 ))}
             </ul>
         </div>
