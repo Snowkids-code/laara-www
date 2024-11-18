@@ -1,0 +1,7 @@
+.homepage-container {
+    @extend .primary-container;
+}
+
+.homepage-wrapper {
+    grid-area: main;
+}
