@@ -1,0 +1,17 @@
+.destinations-container {
+    @extend .primary-container;
+    padding: 2rem 0;
+}
+
+.destinations-wrapper {
+    grid-area: main;
+}
+
+.destinations-header {
+    text-align: center;
+
+    h3 {
+        @include font(1.5, 600, black, 1.5);
+        
+    }
+}
