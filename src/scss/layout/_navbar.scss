@@ -1,7 +1,10 @@
 .navbar-container {
   @extend .primary-container;
   padding: 1rem 0;
-  // position: absolute;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
 }
 
 .navbar-wrapper {

@@ -1,0 +1,27 @@
+.property-card-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.property-card-image {
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.property-card-body {
+    padding: 0.75rem;
+
+    h3 {
+        margin: 0;
+    }
+
+    .location-wrapper {
+        @include flex(flex-start, center, row);
+        gap: 0.5rem;
+    }
+}
