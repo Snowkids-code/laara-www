@@ -1,13 +1,13 @@
-.destinations-container {
+.property-container {
     @extend .primary-container;
     padding: 2rem 0;
 }
 
-.destinations-wrapper {
+.property-wrapper {
     grid-area: main;
 }
 
-.destinations-header {
+.property-header {
     text-align: center;
 
     h3 {

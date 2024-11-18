@@ -1,12 +1,15 @@
 import React from "react";
 import Cover from "../components/Homepage/Cover";
-import Destinations from "../components/Homepage/Destinations";
+import Property from "../components/Homepage/Property";
+import { useSelector } from "react-redux";
 
 export default function Homepage() {
+  const property = useSelector((state) => state.propertyReducer.all_property);
+
   return (
     <div>
       <Cover />
-      <Destinations />
+      <Property property={property} />
     </div>
   );
 }
