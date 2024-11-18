@@ -5,23 +5,46 @@
   margin: 1rem 0;
   cursor: pointer;
 
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    border: 1px solid #d1d0d6;
+    border-radius: 10px;
+  }
+
   .room-type-img-wrapper {
     img {
       width: 100%;
       height: 10rem;
       object-fit: cover;
+
+      @media screen and (max-width: 650px) {
+        border-radius: 10px 10px 0 0;
+      }
     }
   }
 
   .amenties-wrapper {
+    @media screen and (max-width: 650px) {
+      padding: 0.5rem;
+    }
+
     p {
       margin: 0;
       @include font(1, 600, black, 1.5);
+
+      @media screen and (max-width: 650px) {
+        @include font(1.25, 600, black, 1.5);
+      }
     }
   }
 
   .price-counter-wrapper {
     @include font(1, 500, $primary-color, 1);
+    
+    @media screen and (max-width: 650px) {
+      padding: 0.5rem;
+    }
 
     .counter-wrapper {
       @include flex(flex-start, center, row);
