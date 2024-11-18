@@ -5,14 +5,14 @@ const getProperty = async () => {
   return response;
 };
 
-const getPropertById = async (data) => {
+const getPropertyById = async (data) => {
   const response = await ourApi.property.getPropertyById(data);
   return response;
 };
 
 const PropertyService = {
   getProperty,
-  getPropertById,
+  getPropertyById,
 };
 
 export default PropertyService;

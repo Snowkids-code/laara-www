@@ -1,0 +1,40 @@
+.room-type-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+
+  .room-type-img-wrapper {
+    img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  .amenties-wrapper {
+    p {
+      margin: 0;
+      @include font(1, 600, black, 1.5);
+    }
+  }
+
+  .price-counter-wrapper {
+    @include font(1, 500, $primary-color, 1);
+
+    .counter-wrapper {
+      @include flex(flex-start, center, row);
+      gap: 1rem;
+
+      p {
+        border: 1px solid $paragraph-color;
+        padding: 0.5rem 1rem;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}

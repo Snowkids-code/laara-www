@@ -1,0 +1,141 @@
+.single-property-cover {
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+.single-property-body {
+  @extend .primary-container;
+}
+
+.single-property-body-wrapper {
+  grid-area: main;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.single-property-header {
+  @include flex(space-between, center, row);
+
+  h3 {
+    margin: 0;
+    @include font(1.75, 600, black, 1.5);
+  }
+
+  .location-wrapper {
+    @include flex(flex-start, center, row);
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+}
+
+.single-property-ratings {
+  p {
+    @include font(0.9, 500, $primary-color, 1);
+    margin: 0;
+
+    &:last-child {
+      color: $paragraph-color;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.single-property-img-wrapper {
+  .cover-img-wrapper {
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .single-property-img-slider {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+.property-features-wrapper {
+  background-color: #fff;
+  box-shadow: 1px 0px 6px 7px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  border-radius: 10px;
+
+  ul {
+    li {
+      @include font(1, 500, black, 2);
+    }
+  }
+}
+
+.host-details-wrapper {
+  background-color: #fff;
+  box-shadow: 1px 0px 6px 7px rgba(0, 0, 0, 0.07);
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+
+  .host {
+    @include flex(flex-start, flex-start, row);
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  img {
+    background-color: $paragraph-color;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+  }
+}
+
+.property-description {
+  background-color: #fff;
+  box-shadow: 1px 0px 6px 7px rgba(0, 0, 0, 0.07);
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: $paragraph-color;
+
+  h3 {
+    @include font(1.5, 600, black, 1);
+  }
+
+  p {
+    @include font(1, 500, $paragraph-color, 1);
+  }
+
+  ul {
+    li {
+      @include font(1, 500, $paragraph-color, 2);
+    }
+  }
+}
+
+.room-type-wrapper {
+  background-color: #fff;
+  box-shadow: 1px 0px 6px 7px rgba(0, 0, 0, 0.07);
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+
+  h3 {
+    @include font(1.5, 600, black, 1);
+    margin-bottom: 2rem;
+  }
+}
