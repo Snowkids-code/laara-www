@@ -3,7 +3,7 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
-    filter: brightness(60%); 
+    filter: brightness(60%);
   }
 }
 
@@ -18,10 +18,23 @@
   grid-template-columns: 2.5fr 1.5fr;
   gap: 2rem;
   margin-top: 3rem;
+
+  @media screen and (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "images"
+      "prices"
+      "host"
+      "overview"
+      "rooms";
+  }
 }
 
 .single-property-header {
   @include flex(space-between, center, row);
+  grid-area: header;
 
   h3 {
     margin: 0;
@@ -48,6 +61,7 @@
 }
 
 .single-property-img-wrapper {
+  grid-area: images;
   .cover-img-wrapper {
     img {
       width: 100%;
@@ -62,11 +76,19 @@
     gap: 1rem;
     margin-top: 1rem;
 
+    @media screen and (max-width: 650px) {
+      gap: 0.5rem;
+    }
+
     img {
       width: 100%;
       height: 120px;
       object-fit: cover;
       border-radius: 10px;
+
+      @media screen and (max-width: 650px) {
+        height: 80px;
+      }
     }
   }
 }
@@ -76,6 +98,7 @@
   box-shadow: 1px 0px 6px 7px rgba(0, 0, 0, 0.07);
   padding: 1rem;
   border-radius: 10px;
+  grid-area: prices !important;
 
   ul {
     li {
@@ -90,6 +113,7 @@
   margin-top: 3rem;
   padding: 1rem;
   border-radius: 10px;
+  grid-area: host;
 
   .host {
     @include flex(flex-start, flex-start, row);
@@ -112,6 +136,7 @@
   padding: 1rem;
   border-radius: 10px;
   color: $paragraph-color;
+  grid-area: overview;
 
   h3 {
     @include font(1.5, 600, black, 1);
@@ -134,9 +159,15 @@
   margin-top: 3rem;
   padding: 1rem;
   border-radius: 10px;
+  grid-area: rooms;
 
   h3 {
     @include font(1.5, 600, black, 1);
     margin-bottom: 2rem;
   }
 }
+
+// .single-property-right-wrapper,
+// .single-property-left-wrapper {
+//   display: grid;
+// }
