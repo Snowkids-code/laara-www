@@ -1,28 +1,38 @@
 .property-card-container {
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #d1d0d6;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.15) 0px 4px 12px 0px;
+    transform: scale(1.05); 
+    border: none;
+  }
 }
 
 .property-card-image {
-    img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+    @media screen and (max-height: 1000px) {
+        height: 150px;
     }
+  }
 }
 
 .property-card-body {
-    padding: 0.75rem;
+  padding: 0.75rem;
 
-    h3 {
-        margin: 0;
-    }
+  h3 {
+    margin: 0;
+  }
 
-    .location-wrapper {
-        @include flex(flex-start, center, row);
-        gap: 0.5rem;
-    }
+  .location-wrapper {
+    @include flex(flex-start, center, row);
+    gap: 0.5rem;
+  }
 }

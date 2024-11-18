@@ -5,11 +5,11 @@ import { getPropertyById } from "../../reducers/property.reducer";
 
 export default function PropertyCard({ details }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSingleProperty = (id) => {
     dispatch(getPropertyById({ id: id }));
-    navigate(`/property/${id}`)
+    navigate(`/property/${id}`);
   };
   return (
     <div
@@ -17,7 +17,11 @@ export default function PropertyCard({ details }) {
       onClick={() => handleSingleProperty(details.id)}
     >
       <div className="property-card-image">
-        <img alt="property" src={details.propertyImages[0].images.url} />
+        <img
+          alt="property"
+          src={details.propertyImages[0].images.url}
+          className="property-cover-img"
+        />
       </div>
       <div className="property-card-body">
         <h3>{details.name}</h3>

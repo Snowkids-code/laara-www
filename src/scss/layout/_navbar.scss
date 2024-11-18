@@ -16,6 +16,10 @@
   @include flex(space-between, center, row);
   border-bottom: 1px solid #fff;
   padding-bottom: 0.5rem;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .right-navbar-wrapper {
@@ -44,6 +48,10 @@
 
 .navbar-bottom-content {
   padding-top: 0.5rem;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .navlinks-container {
@@ -55,4 +63,17 @@
   li {
     cursor: pointer;
   }
+}
+
+.navbar-mobile {
+  display: none;
+
+  @media screen and (max-width: 1000px) {
+    @include flex(space-between, center, row);
+  }
+}
+
+.navbar-auth-btns {
+  @include flex(flex-start, center, row);
+  gap: 1rem;
 }

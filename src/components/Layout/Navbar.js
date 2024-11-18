@@ -27,9 +27,18 @@ export default function Navbar() {
               <p>email@domain.com</p>
             </div>
           </div>
-          <div className="left-navbar-wrapper">
-            <p>Login</p>
-            <p>Signup</p>
+          <div className="navbar-auth-btns">
+            <button className="login-btn">Login</button>
+            <button className="register-btn">Register</button>
+          </div>
+        </div>
+        <div className="navbar-mobile">
+          <div className="navbar-hamburger">
+            <img alt="hamburger" src="/icons/menu.svg"/>
+          </div>
+          <div className="navbar-auth-btns">
+            <button className="login-btn">Login</button>
+            <button className="register-btn">Register</button>
           </div>
         </div>
         <div className="navbar-bottom-content">

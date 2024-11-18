@@ -1,4 +1,18 @@
-.property-card-btn {
-    width: 10rem !important;
+.login-btn {
+    @include dimensions(7rem, 3rem);
     background-color: $primary-color;
+    border: none;
+    outline: none;
+    @include font(0.9, 600, white, 1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.register-btn {
+    @include dimensions(7rem, 3rem);
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    @include font(0.9, 600, white, 1);
+    border-radius: 10px;
+    cursor: pointer;
 }
