@@ -1,0 +1,119 @@
+.footer-top-container {
+    background-color: #F3F6FD;
+    @extend .primary-container;
+}
+
+.footer-top-wrapper {
+    grid-area: main;
+    @include flex(space-between, center, row);
+    padding: 3rem 0;
+}
+
+.footer-top-left-wrapper {
+    @include flex(flex-start, center, row);
+    gap: 2rem;
+
+    p {
+        @include font(1, 600, black, 2.5);
+        margin: 0;
+
+        &:last-child {
+            font-size: 2rem
+        }
+    }
+}
+
+.footer-top-right-wrapper {
+    @include flex(flex-end, center, row);
+    gap: 1rem;
+
+    input {
+        @include dimensions(20rem, 3rem);
+        outline: none;
+        border: 1px solid $paragraph-color;
+        border-radius: 10px;
+        padding: 0 1rem;
+    }
+}
+
+.footer-bottom-container {
+  @extend .primary-container;
+  margin: 4rem 0;
+}
+
+.footer-bottom-wrapper {
+  grid-area: main;
+  @include flex(space-between, flex-start, row);
+
+  @media screen and (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+  }
+}
+
+.footer-right-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10rem;
+
+  @media screen and (max-width: 1700px) {
+    gap: 7rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    gap: 5rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.footer-value-wrapper {
+  h3 {
+    margin: 0;
+    @include font(1.5, 600, black, 1.5);
+    // text-decoration: underline;
+    // text-underline-offset: 5px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      @include font(1, 500, $paragraph-color, 2);
+    }
+  }
+}
+
+.footer-left-wrapper {
+  h3 {
+    margin: 0;
+    @include font(1.5, 600, black, 1.5);
+  }
+
+  .footer-info {
+    @include font(1.5, 600, $primary-color, 1.5);
+  }
+
+  .footer-titles {
+    @include font(1.1, 600, $paragraph-color, 1.5);
+  }
+}
+
+.mobile-footer-right-wrapper {
+  display: none;
+
+  // @media screen and (max-width: 1100px) {
+  //     display: grid;
+  // }
+}
